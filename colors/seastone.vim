@@ -33,9 +33,9 @@ let Lilac = "guifg=#939cf4 ctermfg=111 guibg=NONE gui=NONE ctermbg=NONE cterm=NO
 let Pink = "guifg=#fd5eb1 ctermfg=205 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 let Red = "guifg=#ff4646 ctermfg=203 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 let DarkGrey = "guifg=#262728 ctermfg=235 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
-let Grey = "guifg=#323334 ctermfg=236 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
-let GreyBg = "guibg=#323334 ctermbg=236 guifg=NONE gui=NONE ctermfg=NONE cterm=NONE"
-let White = "guifg=#f9f2e7 ctermfg=230 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
+let Grey = "guifg=#323334 ctermfg=237 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
+let GreyBg = "guibg=#323334 ctermbg=237 guifg=NONE gui=NONE ctermfg=NONE cterm=NONE"
+let White = "guifg=#e7fdd0 ctermfg=194 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 
 " Noise seems to mean parens & braces in js
 exe "hi Noise "           .White
@@ -80,11 +80,15 @@ exe "hi TypeDef "         .Purple
 exe "hi Character "       .Yellow
 exe "hi String "          .Yellow
 
-exe "hi LineNr "          .DarkGrey
+exe "hi LineNr "          .Grey
 exe "hi CursorLine "      .GreyBg
 exe "hi ColorColumn "     .GreyBg
 exe "hi Error "           .Red
 exe "hi Todo "            .Red
+
+" visible whitespace
+exe "hi NonText "         .Grey
+exe "hi SpecialKey "      .Grey
 
 " todo: work out what these are for... use bright red for now so they show up
 let BrightRed = "guifg=#ff0000 ctermfg=9 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
