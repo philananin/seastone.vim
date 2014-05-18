@@ -14,17 +14,6 @@ endif
 
 let g:colors_name = "seastone"
 
-"teal: #33CC9E (keyword)
-"blue: #55C5EA (method)
-"purple: #BE9EE2 (class)
-"red: #FF4646 (todo)
-"pink: #FD5EB1 (event)
-"lilac: #939CF4 (comment)
-"yellow: #F5D35F (string)
-"off-white: #F9F2E7 - 230 (normal)
-"dark-grey: #262728 - 235 (highlight, visible whitespace)
-"slightly-less-dark-grey: #323334 - 236, perhaps 237
-
 let Teal = "guifg=#33cc9e ctermfg=79 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 let Blue = "guifg=#55c5ea ctermfg=80 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 let Purple = "guifg=#be9ee2 ctermfg=146 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
@@ -40,51 +29,55 @@ let White = "guifg=#e7fdd0 ctermfg=194 guibg=NONE gui=NONE ctermbg=NONE cterm=NO
 " Noise seems to mean parens & braces in js
 exe "hi Noise "           .White
 
-exe "hi Comment "         .Lilac
-exe "hi SpecialComment "  .Lilac
-
 " StorageClass = var in js
 exe "hi StorageClass "    .Teal
 exe "hi Keyword "         .Teal
 " Statement = return in js
 exe "hi Statement "       .Teal
+" Repeat = while, return in c#
+exe "hi Repeat "          .Teal
+exe "hi Boolean "         .Teal
+exe "hi Conditional "     .Teal
+exe "hi Constant "        .Teal
+" For some reason this seems to be <script> tags in html...
+exe "hi Exception "       .Teal
 
-exe "hi Boolean "         .White
-exe "hi Constant "        .Purple
-exe "hi Conditional "     .Blue
-exe "hi Debug "           .DarkGrey
-exe "hi Define "          .Purple
-exe "hi Delimiter "       .White
-exe "hi Exception "       .Red
 exe "hi Function "        .Blue
-exe "hi Identifier "      .White
-exe "hi Ignore "          .Blue
-exe "hi Include "         .Purple
-exe "hi Label "           .Blue
-exe "hi Macro "           .Purple
 
+" numbers
 exe "hi Float "           .White
 exe "hi Number "          .White
 
 exe "hi Operator "        .White
+exe "hi Identifier "      .White
 
-exe "hi PreCondit "       .Purple
-exe "hi PreProc "         .Purple
 exe "hi Special "         .Pink
 exe "hi SpecialChar "     .Pink
 
+" types
 exe "hi Structure "       .Purple
 exe "hi Type "            .Purple
 exe "hi TypeDef "         .Purple
 
+" strings
 exe "hi Character "       .Yellow
 exe "hi String "          .Yellow
 
+" subtle highlights
 exe "hi LineNr "          .Grey
 exe "hi CursorLine "      .GreyBg
 exe "hi ColorColumn "     .GreyBg
+
+" things that must stand out
 exe "hi Error "           .Red
 exe "hi Todo "            .Red
+
+" comments
+exe "hi Comment "         .Lilac
+exe "hi SpecialComment "  .Lilac
+
+" preprocessor directive in c#
+exe "hi PreCondit "       .Red
 
 " visible whitespace
 exe "hi NonText "         .Grey
@@ -92,9 +85,15 @@ exe "hi SpecialKey "      .Grey
 
 " todo: work out what these are for... use bright red for now so they show up
 let BrightRed = "guifg=#ff0000 ctermfg=9 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
-exe "hi Repeat "          .BrightRed
 exe "hi Tag "             .BrightRed
+exe "hi Delimiter "       .BrightRed
+exe "hi Macro "           .BrightRed
+exe "hi Debug "           .BrightRed
+exe "hi Define "          .BrightRed
+exe "hi Ignore "          .BrightRed
+exe "hi Include "         .BrightRed
+exe "hi Label "           .BrightRed
+exe "hi PreProc "         .BrightRed
 
-exe "hi Normal "          .White
 hi Normal       guifg=#f9f2e7 ctermfg=230 guibg=#262728 gui=NONE ctermbg=235 cterm=NONE
 hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      ctermbg=NONE      cterm=underline
