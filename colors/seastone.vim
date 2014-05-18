@@ -28,6 +28,8 @@ let White = "guifg=#e7fdd0 ctermfg=194 guibg=NONE gui=NONE ctermbg=NONE cterm=NO
 
 " Noise seems to mean parens & braces in js
 exe "hi Noise "           .White
+" Some parens seem to be Delimiter
+exe "hi Delimiter "       .White
 
 " StorageClass = var in js
 exe "hi StorageClass "    .Teal
@@ -43,6 +45,8 @@ exe "hi Constant "        .Teal
 exe "hi Exception "       .Teal
 
 exe "hi Function "        .Blue
+" e.g. environmental variables
+exe "hi PreProc "         .Blue
 
 " numbers
 exe "hi Float "           .White
@@ -86,14 +90,12 @@ exe "hi SpecialKey "      .Grey
 " todo: work out what these are for... use bright red for now so they show up
 let BrightRed = "guifg=#ff0000 ctermfg=9 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 exe "hi Tag "             .BrightRed
-exe "hi Delimiter "       .BrightRed
 exe "hi Macro "           .BrightRed
 exe "hi Debug "           .BrightRed
 exe "hi Define "          .BrightRed
 exe "hi Ignore "          .BrightRed
 exe "hi Include "         .BrightRed
 exe "hi Label "           .BrightRed
-exe "hi PreProc "         .BrightRed
 
 hi Normal       guifg=#f9f2e7 ctermfg=230 guibg=#262728 gui=NONE ctermbg=235 cterm=NONE
 hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      ctermbg=NONE      cterm=underline
