@@ -43,6 +43,8 @@ exe "hi Conditional "     .Teal
 exe "hi Constant "        .Teal
 " For some reason this seems to be <script> tags in html...
 exe "hi Exception "       .Teal
+" import in python
+exe "hi Include "         .Teal
 
 exe "hi Function "        .Blue
 " e.g. environmental variables
@@ -87,6 +89,9 @@ exe "hi PreCondit "       .Red
 exe "hi NonText "         .Grey
 exe "hi SpecialKey "      .Grey
 
+" popup menu
+exe "hi Pmenu "           .GreyBg
+
 " todo: work out what these are for... use bright red for now so they show up
 let BrightRed = "guifg=#ff0000 ctermfg=9 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE"
 exe "hi Tag "             .BrightRed
@@ -94,7 +99,6 @@ exe "hi Macro "           .BrightRed
 exe "hi Debug "           .BrightRed
 exe "hi Define "          .BrightRed
 exe "hi Ignore "          .BrightRed
-exe "hi Include "         .BrightRed
 exe "hi Label "           .BrightRed
 
 hi Normal       guifg=#f9f2e7 ctermfg=230 guibg=#262728 gui=NONE ctermbg=235 cterm=NONE
